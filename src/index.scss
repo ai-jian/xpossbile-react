@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Jost:wght@100;400;900&display=swap");
+
+//font
+@font-face {
+  font-family: "New Xpossible Font";
+  scr: url("../src/assets/fonts/NewXpossibleFontRegular.eot");
+
+  src: url("../src/assets/fonts/NewXpossibleFontRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../src/assets/fonts/NewXpossibleFontRegular.woff2") format("woff2"),
+    url("../src/assets/fonts/NewXpossibleFontRegular.woff") format("woff"),
+    url("../src/assets/fonts/NewXpossibleFontRegular.ttf") format("truetype"),
+    url("../src/assets/fonts/NewXpossibleFontRegular.svg#NewXpossibleFontRegular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+//colors
+$colors: (
+  primary: #fff8f8,
+  secondary: #0c0728,
+  tertiary: #f2eeee,
+  primary-darken: #fbdbdc,
+);
+//font family
+$font-jost: "Jost", sans-serif;
+$font-bodoni: "Bodoni Moda", serif;
+
+//font size
+$fontsize-nav: 1.5rem;
+
+//border radius
+$border-radius: 15px;
+
+//box shadow
+$box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+
+//page margin
+$page-margin-mobile: 1rem;
+$page-margin-tablet: 2rem 3rem;
+
+//responsive
+$tablet: 768px;
+$desktop: 1200px;
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+//functions
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: color(primary);
+}
+
+@import "./App.scss";

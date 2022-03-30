@@ -1,0 +1,50 @@
+@import "../../index.scss";
+
+.star {
+  position: "fixed";
+  top: "20%";
+  left: "-20px";
+  background-color: "transparent";
+}
+
+.team {
+  position: relative;
+  position: absolute;
+  margin: 2rem;
+  top: 40%;
+  left: 10%;
+
+  font-family: $font-jost;
+  font-size: 5rem;
+
+  @include tablet {
+    left: 20%;
+    margin: 3rem;
+  }
+
+  // span {
+  //   position: absolute;
+  // }
+}
+
+.line {
+  position: absolute;
+}
+.top {
+  top: 30%;
+  left: 10%;
+}
+.bottom {
+  bottom: 20%;
+  right: 10%;
+}
+.left {
+  transform: rotate(90deg);
+  top: 10%;
+  right: 25%;
+}
+.right {
+  transform: rotate(90deg);
+  bottom: 0%;
+  left: 25%;
+}
