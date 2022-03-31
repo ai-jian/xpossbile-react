@@ -1,12 +1,11 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
-import { Star, Team1, Team2, Team3, Ai, Yuchen } from './components'
-import { images } from '../../constants'
-import "./About.scss"
+import { images } from '../../../constants'
+import "../About.scss"
 
 
-const About = () => {
+const Star = () => {
 
   const ref = useRef();
 
@@ -32,15 +31,12 @@ const About = () => {
     setScrollPercentageStart(elementScrollStart);
     setScrollPercentageEnd(elementScrollEnd);
 
-    //   console.log(rect.top)
-    //   console.log(scrollTop)
-    //   console.log(offsetStart)
   });
 
 
 
   return (
-    <section ref={ref}>
+    <section ref={ref} style={{ position: 'absolute' }}>
       <motion.img
         src={images.star}
         className="star"
@@ -50,18 +46,11 @@ const About = () => {
           top: '20%',
           left: '-300px',
           backgroundColor: 'transparent',
-          zIndex: '-1',
           rotate,
           // scale
 
         }}
       />
-      {/* <Star /> */}
-      <Team1 />
-      <Team2 />
-      <Team3 />
-      <Ai />
-      <Yuchen />
 
     </section>
 
@@ -70,4 +59,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Star

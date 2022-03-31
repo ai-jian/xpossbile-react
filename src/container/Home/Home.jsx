@@ -1,13 +1,22 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
-import { Star, Team1, Team2, Team3, Ai, Yuchen } from './components'
 import { images } from '../../constants'
-import "./About.scss"
+import './Home.scss'
 
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    }
+  }
+}
 
-const About = () => {
-
+const Home = () => {
+  //--------------------------------------------------------------------------
   const ref = useRef();
 
   // Stores the start and end scrolling position for our container
@@ -16,7 +25,9 @@ const About = () => {
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   // Use the container's start/end position percentage
-  const rotate = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [0, 360]);
+  const x = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['0%', '200%']);
+  const left = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['0%', '-100%']);
+  const opacity = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [1, 0]);
 
   useLayoutEffect(() => {
     // Get the distance from the start of the page to the element start
@@ -38,36 +49,22 @@ const About = () => {
   });
 
 
-
   return (
+   
     <section ref={ref}>
-      <motion.img
-        src={images.star}
-        className="star"
-        whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
-        style={{
-          position: 'fixed',
-          top: '20%',
-          left: '-300px',
-          backgroundColor: 'transparent',
-          zIndex: '-1',
-          rotate,
-          // scale
-
-        }}
-      />
-      {/* <Star /> */}
-      <Team1 />
-      <Team2 />
-      <Team3 />
-      <Ai />
-      <Yuchen />
-
+      <motion.div
+      className="manifesto"
+      whileInView={{ y: [-50,0], opacity: [0, 1] }}
+      transition={{ duration: 1, type: "tween", ease: 'easeInOut' }}
+      >
+        <motion.p style={{ left: '0%', left, opacity}} className="landing-left">We release</motion.p>
+        <motion.p style={{ left: '0%', x, opacity}} className="landing-right">innocent soul.</motion.p>
+        <motion.p style={{ left: '0%', left, opacity}} className="landing-left">We design, polish, </motion.p>
+        <motion.p style={{ left: '0%', x, opacity}} className="landing-right">and make it beautiful.</motion.p>
+      </motion.div>
     </section>
-
-
-
+   
   )
 }
 
-export default About
+export default Home

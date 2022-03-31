@@ -4,3 +4,7 @@ export { default as Team3 } from './Team3'
 
 export { default as Ai } from './Ai'
 export { default as Yuchen } from './Yuchen'
+
+export { default as Star } from './Star'
+
+
