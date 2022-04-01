@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
    
-    <section ref={ref}>
+    <section ref={ref} id="home">
       <motion.div
       className="manifesto"
       whileInView={{ y: [-50,0], opacity: [0, 1] }}

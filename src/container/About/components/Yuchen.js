@@ -44,7 +44,7 @@ const Yuchen = () => {
 
 
     return (
-        <section ref={ref}>
+        <div ref={ref} className='app-container'>
 
 
             <div className="team t3">
@@ -69,7 +69,7 @@ const Yuchen = () => {
 
 
             </div>
-        </section>
+        </div>
     )
 }
 

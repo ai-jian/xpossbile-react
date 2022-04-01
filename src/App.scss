@@ -5,5 +5,12 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // overflow-x: hidden;
+}
 
+.app-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -15,8 +15,8 @@ const Team1 = () => {
     const { scrollY, scrollYProgress } = useViewportScroll();
 
     // Use the container's start/end position percentage
-    const scale = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [1, 0])
-    const filter = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['blur(4px)', 'blur(0px)'])
+    const scale = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [0.8, 1])
+    const filter = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['blur(3px)', 'blur(0px)'])
     const left = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['20%', '150%'])
     const right = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['20%', '150%'])
     const top = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['10%', '-90%'])
@@ -44,18 +44,22 @@ const Team1 = () => {
 
 
     return (
-        <section ref={ref}>
+        <div ref={ref} className='app-container'>
 
 
             <div className="team t1">
                 <motion.div
-                    className="header-text"
+                    className="header-text app-flex-center"
                     whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
+                    style={{ scale }}
                 >
-                    <p> We
-                        <motion.span style={{ scale, filter }}> focus </motion.span>
-                        on client's needs.
+                    <p>
+                        We challenge design rules
+                        <br />
+                        and aesthetics.
                     </p>
+
+
                 </motion.div>
 
                 <motion.img
@@ -85,7 +89,7 @@ const Team1 = () => {
                 />
 
             </div>
-        </section>
+        </div>
     )
 }
 

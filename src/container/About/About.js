@@ -16,7 +16,7 @@ const About = () => {
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   // Use the container's start/end position percentage
-  const rotate = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [0, 360]);
+  const rotate = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [0, 720]);
 
   useLayoutEffect(() => {
     // Get the distance from the start of the page to the element start
@@ -40,7 +40,7 @@ const About = () => {
 
 
   return (
-    <section ref={ref}>
+    <section ref={ref} id="about">
       <motion.img
         src={images.star}
         className="star"
@@ -57,8 +57,8 @@ const About = () => {
         }}
       />
       {/* <Star /> */}
-      <Team1 />
       <Team2 />
+      <Team1 />
       <Team3 />
       <Ai />
       <Yuchen />

@@ -15,7 +15,7 @@ const Team2 = () => {
     const { scrollY, scrollYProgress } = useViewportScroll();
 
     // Use the container's start/end position percentage
-    const scale = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [1, 0])
+    const scale = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [0.8, 1])
     const filter = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['blur(4px)', 'blur(0px)'])
     const left = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['20%', '150%'])
     const right = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], ['20%', '150%'])
@@ -44,19 +44,22 @@ const Team2 = () => {
 
 
     return (
-        <div ref={ref}>
+        <div ref={ref} className='app-container'>
 
 
             <div className="team t2">
+
                 <motion.div
-                    className="header-text"
+                    className="header-text app-flex-center"
                     whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
+                    style={{ scale }}
                 >
                     <p>
-                        We challenge design rules and aesthetics.
+                        We
+                        <motion.span style={{ filter }}> focus </motion.span>
+                        on client's needs.
                     </p>
                 </motion.div>
-
 
 
             </div>

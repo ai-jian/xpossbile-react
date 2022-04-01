@@ -1,32 +1,38 @@
 @import "../../index.scss";
 
-// .star {
-//   position: "fixed";
-//   top: "20%";
-//   left: "-20px";
-//   background-color: "transparent";
-// }
+#about {
+    width: 100vw;
+}
 
 
-section {
+.app-container {
     overflow: hidden;
+    height: 100vh;
+    width: 100%;
 }
 
 .team {
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
+
     .header-text {
         font-family: $font-jost;
-        font-size: 5rem;
-    }
+        font-size: 3.5rem;
+        padding: .5em;
 
+        @include tablet {
+            font-size: 5em;
+        }
+    }
+   
 }
 
 
-//TEAM 1
+//TEAM 1 ---> We challenge design rules and aesthetics.
 .t1 {
     position: relative;
 
@@ -34,21 +40,38 @@ section {
         position: absolute;
     }
     .top {
-        top: 30%;
+        top: 20%;
         left: 0%;
     }
     .bottom {
-        bottom: 30%;
+        bottom: 20%;
         right: 0%;
     }
     .left {
         transform: rotate(90deg);
         top: -300%;
-        right: 25%;
+        right: -90%;
     }
     .right {
         transform: rotate(90deg);
         bottom: 0%;
-        left: 25%;
+        left: -90%;
+    }
+
+    @include tablet {
+        .left {
+            right: 20%;
+        }
+        .right {        
+            left: 20%;
+        }
+    }
+    @include desktop {
+        .left {
+            right: 30%;
+        }
+        .right {  
+            left: 30%;
+        }
     }
 }
