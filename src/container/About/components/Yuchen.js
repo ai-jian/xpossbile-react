@@ -44,32 +44,31 @@ const Yuchen = () => {
 
 
     return (
-        <div ref={ref} className='app-container'>
+
+        <div ref={ref} className='app-container app-flex-center'>
+
+            <motion.div
+                className="app__about-profile app-flex-center"
+                whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
+            >
+                <div className="profile-pic pic-yuchen"></div>
+                <div className="profile-name-wrapper">
+                    <h3 className="name">Yuchen Yang</h3>
+                    <p className="title">Talented graphic designer</p>
+                </div>
+                <p className="profile-description">
+                    Yuchen is a professional practitioner of art and design. She gathers
+                    idea from her daily sketches and observation, develops concepts,
+                    creating graphic design from her small laptop. Always willing and
+                    has ability to work independently as well as part of a team. She is
+                    never tired of taking challenges.
+                </p>
+
+            </motion.div>
+
+        </div >
 
 
-            <div className="team t3">
-                <motion.div
-                    className="header-text"
-                    whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
-                >
-                    <div className="profile">
-                        <div className="pic" />
-                        <h3 className="name">Yuchen Yang</h3>
-                        <p className="title">Talented graphic designer</p>
-                        <p className="description">
-                            Yuchen is a professional practitioner of art and design. She gathers
-                            idea from her daily sketches and observation, develops concepts,
-                            creating graphic design from her small laptop. Always willing and
-                            has ability to work independently as well as part of a team. She is
-                            never tired of taking challenges.
-                        </p>
-                    </div>
-                </motion.div>
-
-
-
-            </div>
-        </div>
     )
 }
 

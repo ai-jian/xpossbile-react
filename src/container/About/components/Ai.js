@@ -44,30 +44,33 @@ const Ai = () => {
 
 
     return (
-        <div ref={ref} className='app-container'>
+        <div ref={ref} className='app-container app-flex-center'>
+
+            <motion.div
+                className="app__about-profile app-flex-center"
+                whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
+            >
+                <div className="profile-pic pic-ai">
+                    <img src={images.ai_flower} alt="aijian-profile-image" />
+                </div>
+                {/* <div className="ai-backgroundEl"></div> */}
+
+                <div className="profile-name-wrapper">
+                    <h3 className="name">Ai Jian</h3>
+                    <p className="title">Creative Developer</p>
+                </div>
+                <p className="profile-description">
+                    Ai is a frontend web developer who has been always curious about new
+                    technologies, loves all things aesthetically pleasing, and makes
+                    visuals come to life and react on screen.
+                </p>
+
+            </motion.div>
 
 
-            <div className="team t3">
-                <motion.div
-                    className="header-text"
-                    whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
-                >
-                    <div className="profile">
-                        <div className="pic" />
-                        <h3 className="name">Ai Jian</h3>
-                        <p className="title">Creative Developer</p>
-                        <p className="description">
-                            Ai is a frontend web developer who has been always curious about new
-                            technologies, loves all things aesthetically pleasing, and makes
-                            visuals come to life and react on screen.
-                        </p>
-                    </div>
-                </motion.div>
 
 
-
-            </div>
-        </div>
+        </div >
     )
 }
 

@@ -5,7 +5,6 @@ import logo from '../assets/image/logo.png'
 import star from '../assets/image/star.svg'
 import line from '../assets/image/line.svg'
 
-
 import graphicChart1 from '../assets/image/graphic-chart/graphic-chart1.jpg'
 import graphicChart2 from '../assets/image/graphic-chart/graphic-chart2.jpg'
 import graphicChart3 from '../assets/image/graphic-chart/graphic-chart3.jpg'
@@ -20,6 +19,11 @@ import bookcover1 from '../assets/image/bookcover/bookcover1.jpg'
 import bookcover2 from '../assets/image/bookcover/bookcover2.jpg'
 import bookcover3 from '../assets/image/bookcover/bookcover3.jpg'
 import bookcover4 from '../assets/image/bookcover/bookcover4.jpg'
+
+import ai_backgroundEl from '../assets/image/profile_images/ai_backgroundEl.svg'
+import ai_flower from '../assets/image/profile_images/ai_flower.svg'
+import ai_leaf from '../assets/image/profile_images/ai_leaf.svg'
+import ai_portait from '../assets/image/profile_images/ai_portait.svg'
 
 
 export default {
@@ -40,4 +44,8 @@ export default {
   bookcover2,
   bookcover3,
   bookcover4,
+  ai_portait,
+  ai_leaf,
+  ai_flower,
+  ai_backgroundEl
 };

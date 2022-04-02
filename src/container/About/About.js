@@ -57,9 +57,9 @@ const About = () => {
         }}
       />
       {/* <Star /> */}
-      <Team2 />
-      <Team1 />
-      <Team3 />
+      {/* <Team2 /> */}
+      {/* <Team1 /> */}
+      {/* <Team3 /> */}
       <Ai />
       <Yuchen />
 
