@@ -22,9 +22,8 @@ import bookcover4 from '../assets/image/bookcover/bookcover4.jpg'
 
 import ai_backgroundEl from '../assets/image/profile_images/ai_backgroundEl.svg'
 import ai_flower from '../assets/image/profile_images/ai_flower.svg'
-import ai_leaf from '../assets/image/profile_images/ai_leaf.svg'
-import ai_portait from '../assets/image/profile_images/ai_portait.svg'
-
+import ai_leaf from '../assets/image/profile_images/ai_leaf.png'
+import ai_portait from '../assets/image/profile_images/ai_portait.png'
 
 export default {
   favicon,

@@ -51,7 +51,8 @@ const Ai = () => {
                 whileInView={{ y: [-100, 0], opacity: [0, 1], delay: 0.5 }}
             >
                 <div className="profile-pic pic-ai">
-                    <img src={images.ai_flower} alt="aijian-profile-image" />
+                    {/* <img src={images.ai_flower} alt="aijian-profile-image" /> */}
+                    {/* <img src={images.ai_leaf} alt="aijian-profile-image" /> */}
                 </div>
                 {/* <div className="ai-backgroundEl"></div> */}
 
@@ -60,7 +61,7 @@ const Ai = () => {
                     <p className="title">Creative Developer</p>
                 </div>
                 <p className="profile-description">
-                    Ai is a frontend web developer who has been always curious about new
+                    <span>Ai</span> is a frontend web developer who has been always curious about new
                     technologies, loves all things aesthetically pleasing, and makes
                     visuals come to life and react on screen.
                 </p>

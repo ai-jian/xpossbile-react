@@ -57,7 +57,7 @@ const Yuchen = () => {
                     <p className="title">Talented graphic designer</p>
                 </div>
                 <p className="profile-description">
-                    Yuchen is a professional practitioner of art and design. She gathers
+                    <span>Yuchen</span> is a professional practitioner of art and design. She gathers
                     idea from her daily sketches and observation, develops concepts,
                     creating graphic design from her small laptop. Always willing and
                     has ability to work independently as well as part of a team. She is
