@@ -41,7 +41,7 @@ const Navbar = () => {
               <ul className= {open ? 'app__navbar-links show-nav' :'app__navbar-links'} >
               
 
-              {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
+              {['home', 'about', 'contact', 'showcase', 'service'].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setOpen(false)}>{item}</a>
                 </li>

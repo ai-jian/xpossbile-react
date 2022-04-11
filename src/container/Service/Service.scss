@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.app__service {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: scroll;
+
+    .service-wrapper {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        // background-color: violet;
+        margin: 1rem;  
+        
+        .service-text{
+            flex:.3;
+            font-family:$font-jost;
+            line-height: 3em;
+            .service-title{
+                text-transform: uppercase;
+            }
+            .service-description{
+                font-size:1.3rem;
+            }
+        }
+        .service-video {
+            flex: .4;
+            background-image: linear-gradient(to bottom,pink, rgb(15, 12, 93));
+            height: 50%;
+            width: 100%;
+            border-radius: 20px;
+            margin-left: 2rem;
+        }
+    }
+
+}
