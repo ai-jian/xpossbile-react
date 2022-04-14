@@ -19,30 +19,57 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        position: relative;
 
         padding: 0 1.5rem;
         
+
+        @include tablet {
+            padding-left: 2.5rem;    
+        }
     }
 
-    
-    .footer-logo {
+    .footer-title {
+        font-family: $font-jost;
+        font-weight: normal;
         margin-top: 1rem;
-        height: auto;
-        width: 35%;
-        filter: invert(100%) brightness(1000%) contrast(100%); 
+        font-size:2.5rem;
+        letter-spacing: 2px;
     }
+
+    // .footer-logo {
+    //     margin-top: 1rem;
+    //     height: auto;
+    //     width: 35%;
+    //     filter: invert(100%) brightness(1000%) contrast(100%); 
+    // }
     .footer-email {
         margin-bottom: 2rem;
+
+        .mailicon {
+            transform: scale(1.7);
+            margin: 0 .5rem;
+        }
         a{
             text-decoration: none;
             color: color(primary);
+            margin: 0 .5rem;
         }
+    }
+
+    .footer-find-text {
+        font-size: 1.3rem;
     }
 
     .footer-social-icons {
         display:flex;
         justify-content:space-between;
         width: 30%;
+        margin: 0 .1rem;
+
+        @include tablet {
+            width:13ch;
+        }
     
         .social-icon{
             transform: scale(1.7);
@@ -51,12 +78,27 @@
 
     .footer-nav {
         display: flex;
+        display: none;
+        flex-direction: column;
         justify-content:space-between;
-        align-items:center;
-        gap: 1em;
+        align-items:flex-start;
+        
+
+        @include tablet {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            top: 15%;
+        }
+
+        .nav-title {
+            font-weight: normal;
+            font-size: 1.3rem;
+        }
 
         li {
             list-style: none;
+            padding: .1em 0;
             a{
                 color:color(primary);
                 text-transform: capitalize;
