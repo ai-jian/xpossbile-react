@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import './Questionnaire.scss'
 
 const Questionnaire = () => {
@@ -46,26 +48,31 @@ const Questionnaire = () => {
   console.log(currentQuestion)
 
   return (
-    <div>Questionnaire
+    <section className="questionnaire">
       {
         <>
           <div className="question-section">
-            <div className="question-count">
+            {/* <div className="question-count">
               <span>Question {currentQuestion + 1}</span>/{questions.length}
-            </div>
+            </div> */}
             <div className="question-text">{questions[currentQuestion].questionText}</div>
           </div>
           <div className="answer-section">
             {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>{answerOption.answerText}</button>
+              <button onClick={() => setCurrentQuestion(currentQuestion + 1)} >{answerOption.answerText}</button>
             ))}
           </div>
 
-          <button type="button" className="back-btn" onClick={() => setCurrentQuestion(currentQuestion - 1)}>back</button>
-          <button type="button" className="next-btn" onClick={() => setCurrentQuestion(currentQuestion + 1)}>next</button>
+          <div className="question-progress">
+            <button type="button" className="back-btn" onClick={() => setCurrentQuestion(currentQuestion - 1)}><IoIosArrowBack /></button>
+
+            <p className="question-count"><span>Question {currentQuestion + 1}</span>/{questions.length}</p>
+
+            <button type="button" className="next-btn" onClick={() => setCurrentQuestion(currentQuestion + 1)}><IoIosArrowForward /></button>
+          </div>
         </>
       }
-    </div>
+    </section>
   )
 }
 
