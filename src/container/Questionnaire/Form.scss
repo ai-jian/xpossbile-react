@@ -1,0 +1,155 @@
+@import "../../index.scss";
+.form-container{
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  background-color: #fff;
+  font-family: $font-jost;
+  color: color(secondary);
+}
+
+.form-header{
+  // background-color: pink;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  h1 {
+    font-size:1.2rem;
+    margin: 0 2rem;
+  }
+
+  @include tablet {
+    height:20%;
+    h1{
+      font-size:2rem
+    }
+  }
+}
+
+//form body
+.form-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.formbody-contanier {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: #fff;
+
+
+// form answer
+.answer-section{
+  height: 80%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto, minmax(500px, 1fr));
+  gap: 1rem;
+
+  
+  button {
+    height:90%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: pink;
+    transition: all 0.35s ease-in-out;
+    
+    &:hover {
+      cursor: pointer;
+      background: palevioletred;
+      transform:scale(1.005);
+      box-shadow: 0 0 5rem rgba(254, 115, 182, 0.795);
+    }
+  }
+
+  p{
+    text-align: center;
+
+  }
+}
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    background-color: color(primary);
+    border:none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size:1rem;
+    padding: .5rem 1rem;
+  }
+
+  
+  #name,
+  input[type="email"] {
+    box-shadow:none;
+    background-color:transparent;
+    border-radius: 0;
+    border-bottom: 1px solid color(secondary);
+    width: 30ch;
+  }
+
+  textarea {
+   height:50%;
+   width: 100%;
+   padding: 1rem 1.5rem;
+
+   @include tablet {
+     width:40%;
+   }
+  }
+}
+
+//form footer
+.form-footer {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        align-items:center;
+        justify-content:space-between;
+        background-color: color(tertiary);
+        color: color(primary-darken);
+
+        @include tablet {
+          height: 15%;
+        }
+
+        button{
+            margin: 1rem;
+            border: none;
+            font-size:2rem;
+            color: color(primary-darken);
+            transition: all 0.35s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                transform:scale(1.1);
+            }
+        }
+
+        .progressbar {
+          height: 15%;
+          width: 30%;
+          background-color:color(primary);
+          border-radius: 1rem;
+          overflow: hidden;
+          
+          .form-bar {
+            height: 100%;
+            background-color:color(primary-darken);
+          }
+        }
+    }
+

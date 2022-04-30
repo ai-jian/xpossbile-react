@@ -20,6 +20,10 @@ import bookcover2 from '../assets/image/bookcover/bookcover2.jpg'
 import bookcover3 from '../assets/image/bookcover/bookcover3.jpg'
 import bookcover4 from '../assets/image/bookcover/bookcover4.jpg'
 
+import step1 from '../assets/image/service/step1.mov'
+import step2 from '../assets/image/service/step2.mov'
+
+
 import ai_backgroundEl from '../assets/image/profile_images/ai_backgroundEl.svg'
 import ai_flower from '../assets/image/profile_images/ai_flower.svg'
 import ai_leaf from '../assets/image/profile_images/ai_leaf.png'
@@ -43,6 +47,8 @@ export default {
   bookcover2,
   bookcover3,
   bookcover4,
+  step1,
+  step2,
   ai_portait,
   ai_leaf,
   ai_flower,

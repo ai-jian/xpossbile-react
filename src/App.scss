@@ -14,3 +14,45 @@
   justify-content: center;
   align-items: center;
 }
+
+.app-btn {
+  appearance: auto;
+  width: 30ch;
+  background-color: color(primary);
+  border:none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  font-size:1rem;
+  padding: .5rem 1rem;
+  border: none;
+  color: color(secondary);
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width:0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 1rem; 
+    box-shadow:
+      -7px -7px 20px 0px #fff9,
+      -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002,
+      4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:active{
+    top: 2px;
+  }
+}

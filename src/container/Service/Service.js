@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { images } from '../../constants'
+import { step1 } from "../../assets/image/service/step1.mp4"
 import './Service.scss'
 
 
@@ -9,7 +10,7 @@ const services = [
     {
         title: 'step1',
         description: 'No idea should be directly thrown in the bin unless it has been tried.',
-        videoURL: '#'
+        videoURL: images.step1
     },
     {
         title: 'step2',
@@ -44,7 +45,21 @@ const Service = () => {
                         <h1 className="service-title">{service.title}</h1>
                         <p className="service-description">{service.description}</p>
                     </div>
-                    <div className="service-video">{service.videoURL}</div>
+                    <video controls width="480" autoplay>
+
+                        {/* <source src="/media/cc0-videos/flower.webm"
+                            type="video/webm" /> */}
+
+                        <source src="../../assets/image/service/step1.mp4"
+                            type="video/mp4" />
+
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+
+
+
+                    {/* <video type="video" src={service.videoURL}></video> */}
+
 
                 </motion.div>
             ))}
