@@ -18,7 +18,7 @@
         margin: 1rem;  
         
         .service-text{
-            flex:.3;
+            flex:.2;
             font-family:$font-jost;
             line-height: 3em;
             .service-title{
@@ -29,13 +29,17 @@
             }
         }
         .service-video {
-            flex: .4;
+            flex: .6;
             background-image: linear-gradient(to bottom,pink, rgb(15, 12, 93));
-            height: 50%;
-            width: 100%;
+            width: 450px;
+            height: 480px;
             border-radius: 20px;
             margin-left: 2rem;
+            object-fit: "contain";
+            // background-image: url(../../assets/image/service/scene1.gif);
+            background-size: cover;
         }
+
     }
 
 }
