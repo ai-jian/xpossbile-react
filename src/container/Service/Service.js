@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+
 import { images } from '../../constants'
-import { step1 } from "../../assets/image/service/step1.mp4"
 import './Service.scss'
 
 
@@ -15,13 +15,13 @@ const services = [
     {
         title: 'step2',
         description: 'We can always find the jade beneath the skin of stone.',
-        videoURL: '#'
+        videoURL: images.step2
     },
     {
         title: 'step3',
         description: `We release the innocent soul, 
                         we design, we polish, we make it beautiful.`,
-        videoURL: '#'
+        videoURL: images.step3
     },
     {
         title: 'step4',
@@ -32,9 +32,21 @@ const services = [
 ]
 
 
+
+// const animation1 = lottie.loadAnimation({
+//     container: document.getElementById('anim'),
+//     renderer: 'svg',
+//     loop: false,
+//     autoplay: true,
+//     path: 'wNoise.json',
+//     name: "Demo Animation1",
+// });
+
+
 const Service = () => {
     return (
         <section id="service" className="app__service">
+
             {services.map((service, index) => (
                 <motion.div
                     key={service.title + index}
@@ -45,27 +57,38 @@ const Service = () => {
                         <h1 className="service-title">{service.title}</h1>
                         <p className="service-description">{service.description}</p>
                     </div>
-                    <video controls width="480" autoplay>
+                    {/* <div id="anim"></div>
+                    <video
+                        className="service-video"
+                        // tabIndex={0}
+                        preload="preload"
+                        style={{ width: "50%", objectFit: "contain" }}
+                        playsInline
+                        autoPlay
+                    // controls
+                    >
+                        <source
+                            type="video/mp4"
+                            src={service.videoURL}
+                        // src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        />
+                    </video> */}
 
-                        {/* <source src="/media/cc0-videos/flower.webm"
-                            type="video/webm" /> */}
 
-                        <source src="../../assets/image/service/step1.mp4"
-                            type="video/mp4" />
-
-                        Sorry, your browser doesn't support embedded videos.
-                    </video>
-
+                    {/* <img src={service.videoURL} alt="" className="service-video" /> */}
+                    <div className="service-video" style={{ backgroundImage: `url(${service.videoURL})` }} />
+                    {/* <div className="service-video" /> */}
 
 
                     {/* <video type="video" src={service.videoURL}></video> */}
 
 
                 </motion.div>
-            ))}
+            ))
+            }
 
 
-        </section>
+        </section >
     )
 }
 
